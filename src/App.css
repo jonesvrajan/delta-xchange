@@ -1,38 +1,77 @@
-.App {
+
+@import "https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap";
+
+body {
+  font-family: "Mulish";
+  font-size: 16px;
+  color: #09182c;
+  font-weight: 300;  
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+p {
+  font-size: .8rem;
+}
+
+h3, p, div {
+  font-family: "Mulish";
+  font-weight: 500;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%; 
+  max-width: 100%;
+}
+
+.table-header,header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header {
+  background: linear-gradient(0deg,rgba(13,55,95,0.8),rgba(13,55,95,0.8)),radial-gradient(98.26% 227.49% at 103.61% 2.83%,#1686f0 0%,#2783db 15.36%,#2979c5 39.34%,#1e5c97 68.94%,#0d375f 99.37%);
+  border-radius: 0;
+  padding: 20px;
+}
+
+.table-header {
+  top: 80px;
+  background-color: #f0f2f5;
+  padding: 10px ;
+}
+
+.table > div, .table > p {
+  padding: 15px 10px;
+  border: 1px solid #f0f2f5;
+  border-collapse: collapse;
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loading {
+  background: url(./loading.gif);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
