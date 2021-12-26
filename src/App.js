@@ -20,12 +20,9 @@ const apiCall = {
 
 function App() {
 
-    //const [mark, setMark ] = useState([]);
     const [markOne, setMarkOne ] = useState([]);
     const [tableData, setTableData ] = useState([]);
-    //const [symbols, setSymbols ] = useState([]);
     const [loader, setLoader ] = useState(true);
-    //const inputSymbols = apiCall.payload.channels[0].symbols;
     
     const fetchData = async () => {
         const response = await fetch("https://api.delta.exchange/v2/products");
@@ -51,10 +48,8 @@ function App() {
                 }
 
                 else {
-                    //const sym = json.symbol;
                     const price = json.mark_price;
                     setMarkOne(markOne => [...markOne.slice(0,2), price]);
-                    //setSymbols(symbols => [...symbols.slice(0,2), sym])
      
                 }
 
